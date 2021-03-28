@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/changestyle.css"/>
+    <title>ChangePassword</title>
+</head>
+<body>
+    <div id="bigBox">
+        <h1>Change Password</h1>
+
+        <div class="inputBox">
+            <div class="inputText">
+                <input type="password" maxlength="20" required="required" id="oldpwd" placeholder="Old Password" />
+            </div>
+
+            <div class="inputText">
+                <input type="password" maxlength="20" name="pwd1" id="pwd1" required="required" placeholder="Password" />
+            </div>
+
+            <div class="inputText">
+                <input type="password" maxlength="20" name="pwd2" id="pwd2" required="required" placeholder="Insure" />
+                <span id="warning"></span>
+            </div>
+
+
+
+            <input type="button" class="inputButton" value="RETURN" onclick="javascrtpt:window.location.href='file:///F:/VS%20HTML/Main/main.html'"/>
+
+            <input type="button" id="submit" class="inputButton" value="CONFIRM" onclick="check()"/>
+        </div>
+
+    </div>
+</body>
+</html>
