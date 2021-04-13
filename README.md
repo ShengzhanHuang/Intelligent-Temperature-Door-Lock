@@ -2,7 +2,6 @@
 
 
 
-![输入图片描述](%E6%96%87%E6%A1%A3%E8%AF%B4%E6%98%8E_md_files%5Clogo.jpg?v=1&type=image)
 
 
 ## ABOUT
