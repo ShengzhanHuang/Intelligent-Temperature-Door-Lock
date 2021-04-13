@@ -1,5 +1,10 @@
 # Intelligent-Temperature-Door-Lock
 
+
+
+![输入图片描述](%E6%96%87%E6%A1%A3%E8%AF%B4%E6%98%8E_md_files%5Clogo.jpg?v=1&type=image)
+
+
 ## ABOUT
 
 This is a project designed to respond to Corona Virus Disease 2019. It is part of the real-time embedded programming course at the University of Glasgow. We try to complete an Intelligent Temperature Door Lock system, which can detect visitors' body temperature, record the temperature and photos of visitors, and realize remote unlocking.
@@ -18,7 +23,7 @@ This is a project designed to respond to Corona Virus Disease 2019. It is part o
 	+ When the visitor arrives, the infrared temperature sensor detects the visitor for temperature measurement and photographing
 	+ The data is packaged and sent to the administrator authority device for recording and backup, and the temperature sensing data is returned and displayed on the door screen
 	+ If the visitor's body temperature is too high, the administrator's device will be marked with a red warning and the door will not be opened; if the visitor's body temperature is normal, he can press to open the door by himself after hearing the unlocking sound.
----
+
 #### mode: private state
 + **State description**: The private state is usually applicable to private scenes such as home environment. The unlocking conditions of the door lock system in this scene mainly depend on the judgment of the administrator with authority. Information such as temperature and visitor photos will be transmitted to the administrator's device and determined by the administrator Whether to open the door, in this state, the administrator device has the highest authority to unlock.
 
