@@ -43,3 +43,8 @@ This is a project designed to respond to Corona Virus Disease 2019. It is part o
 
 👤 **Fangyu Zhai**
 
+<!-- Twitter page [@BikeComplicated](https://twitter.com/BikeComplicated) -->
+
+This project is marketed on Twitter [@rtep33](https://twitter.com/home?lang=zh-cn) 
+
+
