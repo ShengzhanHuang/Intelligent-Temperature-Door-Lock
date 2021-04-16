@@ -1,6 +1,9 @@
 # Intelligent-Temperature-Door-Lock
 
 ![logo](/Resources/logo.png)
+<p align="center">
+  <a href="https://github.com/ShengzhanHuang/Intelligent-Temperature-Door-Lock"><img height=120 src="Resources/logo.jpg"></img></a>
+</p>  
 
 
 ## ABOUT
@@ -47,4 +50,6 @@ This is a project designed to respond to Corona Virus Disease 2019. It is part o
 This project is marketed on Twitter [@rtep33](https://twitter.com/home?lang=zh-cn) 
 You can follow and contact us via Twitter
 <p align="center">
-  <a href="https://twitter.com/home?lang=zh-cn"><img height=100 src="Resources/twitter.png"></img></a>
+  <a href="https://twitter.com/home?lang=zh-cn"><img height=100 src="Resources/twitter.jpg"></img></a>
+</p>  
+
