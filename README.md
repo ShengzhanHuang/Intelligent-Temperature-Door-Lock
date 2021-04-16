@@ -1,9 +1,6 @@
 # Intelligent-Temperature-Door-Lock
 
 
-
-
-
 ## ABOUT
 
 This is a project designed to respond to Corona Virus Disease 2019. It is part of the real-time embedded programming course at the University of Glasgow. We try to complete an Intelligent Temperature Door Lock system, which can detect visitors' body temperature, record the temperature and photos of visitors, and realize remote unlocking.
@@ -19,7 +16,7 @@ This is a project designed to respond to Corona Virus Disease 2019. It is part o
 + **State description**: The system in the public state is usually applicable to public places such as laboratories and teaching buildings, shopping malls, supermarkets and other scenarios. The unlocking condition of the door lock system in this scenario is the only criterion for determining whether the temperature is normal, and the body temperature and photos of each visitor will be recorded, and the information will be returned to the administrator authority owner.
 + **working principle**
 	+ **Precondition** : The door lock mode is public state, and the display on the door shows that the door lock status is OFF
-	+ When the visitor arrives, the infrared temperature sensor detects the visitor for temperature measurement and photographing
+	+ When visitors arrive, they press the temperature detection button to measure the temperature and take photos
 	+ The data is packaged and sent to the administrator authority device for recording and backup, and the temperature sensing data is returned and displayed on the door screen
 	+ If the visitor's body temperature is too high, the administrator's device will be marked with a red warning and the door will not be opened; if the visitor's body temperature is normal, he can press to open the door by himself after hearing the unlocking sound.
 
@@ -28,7 +25,7 @@ This is a project designed to respond to Corona Virus Disease 2019. It is part o
 
 + **working principle**
 	+ **Precondition**: The lock mode is private state, and the display on the door shows that the lock status is OFF
-	+ When the visitor arrives, the infrared temperature sensor detects the visitor for temperature measurement and photographing
+	+ When visitors arrive, they press the temperature detection button to measure the temperature and take photos
 	+ The data is packaged and sent to the administrator authority device , and the temperature sensing data is displayed on the door screen
 	+ If the visitor’s body temperature is too high, the administrator’s device will be warned in red;
 	+ The administrator determines whether to open the door based on the visitor information
