@@ -10,12 +10,12 @@ body
 #bigBox
 {
     margin: 0 auto;
-    margin-top: 70px;
+    margin-top: 100px;
     margin-left: 50px;
     padding: 20px 50px;
     background-color: #c99090;
     width: 200px;
-    height: 550px;
+    height: 500px;
     border-radius: 10px;
 }
 
@@ -59,3 +59,10 @@ body
     border-radius: 20px;
     background-image: linear-gradient(to right,#b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
 }
+
+#bigBox .inputBox span
+{
+    margin-top: 20px;
+    color:white;
+}
+
