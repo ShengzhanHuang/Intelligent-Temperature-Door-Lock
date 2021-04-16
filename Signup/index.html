@@ -9,6 +9,7 @@
 <body>
     <div id="bigBox">
         <h1>SIGNUP</h1>
+        <!-- <form action="signup.php" method="GET"> -->
 
         <div class="inputBox">
             <div class="inputText">
@@ -44,28 +45,31 @@
             <br></br>
             <input type="button" class="inputButton" value="CANCEL" onclick="javascrtpt:window.location.href='file:///F:/VS%20HTML/Login/index.html'"/>
 
-            <input type="button" id="submit" class="inputButton" value="CONFIRM" onclick="check()"/>
+            <input type="button" id="submit" class="inputButton" value="CONFIRM" onclick="Register()"/>
         </div>
+        </form>
 
     </div>
 
     <script>
-        /*function Register()
+        function Register()
         {
             var Username = document.getElementById("username").value,
-                Password1 = document.getElementById("pwd1").value
-                Password2 = document.getElementById("pwd2").value;
+                Password1 = document.getElementById("pwd1").value,
+                Password2 = document.getElementById("pwd2").value,
+                Data = "Username" + Username + "&" + "Password" + Password1;
+            
+            if(!(check()))
+            {
+                return;
+            }
+
             
             var Request = new XMLHttpRequest();
-            Request.open("POST","/");
-            Request.setRequestHeader('content-type','x-www-form-urlenoded')
-            Request.onreadystatechange = function(){
-                if()
-            }
-            Request.send(body);
-            //Request.onload() = function{}
-
-        }*/
+            
+            Request.open("GET","signup.php?"+ Data);
+            Request.send();
+        }
 
 
 
@@ -77,12 +81,14 @@
            {
                document.getElementById("warning").innerHTML="Passwords are different! ";
                warning.style.display='block';
+               return false;
            }
 
            else
            {
                warning.style.display = 'none';
                //document.getElementById("warning").innerHTML= " ";
+               return true;
 
            }
         }
