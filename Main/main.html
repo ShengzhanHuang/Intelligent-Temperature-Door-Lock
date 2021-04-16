@@ -7,26 +7,69 @@
     <title>Main</title>
 </head>
 <body>
+
+    <?php
+
+    $con = mysql_connect("192.168.31.70","root","") or die ("connection failed!");
+    mysql_query("set names utf8");
+    mysql_select_db("door_lock_system",$con);
+
+    $username = $_GET['username'];
+    $check = mysql_query("select * from User where Username=$username",$con);
+    $check_arr = mysql_fetch_assoc($check);
+
+    ?>
+
+    <form action ="OpenD.php" method="GET">
+
     <div id="bigBox">
-        <h1> User Information</h1>
+        <h1> User Box</h1>
 
         <div class="inputBox">
             <div class="inputText">
                 <span>User name :</span>
-                <input type="text" value="" />
+                <br></br>
+                <input type="text" id = "name" value="" />
             </div>
-            <br></br>
-            <div class="inputText">
+            
+            <!-- <div class="inputText">
                 <span>Phone Number :</span>
-                <input type="text" value="" />
-            </div>
-            <br></br>
+                <input type="text" id = "Number" value="" />
+            </div> -->
 
-            <input type="button" class="inputButton" value="Change Passsord" onclick="javascrtpt:window.location.href='file:///F:/VS%20HTML/ChangePassword/changepwd.html'" />
-            <input type="button" class="inputButton" value="Edit " onclick="javascrtpt:window.location.href='file:///F:/VS%20HTML/Edit%20Information/Edit.html'" />
+            <br></br>
+            <span>User Edit:</span>
+            <input type="button" class="inputButton" value="Change Password" onclick="javascrtpt:window.location.href='file:///F:/VS%20HTML/ChangePassword/changepwd.html'" />
+            <!-- <input type="button" class="inputButton" value="Edit information" onclick="javascrtpt:window.location.href='file:///F:/VS%20HTML/Edit%20Information/Edit.html'" /> -->
             <input type="button" class="inputButton" value="Exit " onclick="javascrtpt:window.location.href='file:///F:/VS%20HTML/Login/index.html'" />
+           
+            <br></br>
+            <br></br>
+            <span>User Right:</span>
+            <input type="submit" class="inputButton" value="Open the door" onclick="">
         </div>
 
     </div>
+
+    </form>
+
+
+
+    <script>
+        Infor();
+        function Infor()
+        {
+            /*var Username = document.getElementById("username").value;
+            var Showinfor = new XMLHttpRequest();
+
+            Showinfor.onload() = function()
+            {
+                document.getElementById("name").innerHTML = Showinfor.responseText;
+            }*/
+
+            var params = location.search.replace("?","").split("=");
+            document.getElementById("name").value = params[1];
+        }
+    </script>
 </body>
 </html>
