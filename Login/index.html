@@ -12,10 +12,10 @@
 
         <div class="inputBox">
             <div class="inputText">
-                <input type="text" required="required" placeholder="Username" />
+                <input type="text" id="Username" required="required" placeholder="Username" />
             </div>
             <div class="inputText">
-                <input type="password" required="required" placeholder="Password" />
+                <input type="password" id="password" required="required" placeholder="Password" />
             </div>
 
             <br></br>
@@ -24,5 +24,20 @@
         </div>
 
     </div>
+    
+    <script>
+    function Login()
+        {
+            var Username = document.getElementById("Username").value,
+                Password = document.getElementById("password").value,
+                Data = "Username" + Username + "&" + "Password" + Password;
+            
+            var Request = new XMLHttpRequest();
+            
+            Request.open("GET","login.php?"+ Data);
+            Request.send();
+            
+        }
+</script>
 </body>
 </html>
