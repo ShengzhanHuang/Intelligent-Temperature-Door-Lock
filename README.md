@@ -1,6 +1,6 @@
 # Intelligent-Temperature-Door-Lock
 
-![logo](README_md_files%5Clogo.jpg?v=1&type=image)
+![logo](/Resources/logo.png)
 
 
 ## ABOUT
@@ -42,7 +42,7 @@ This is a project designed to respond to Corona Virus Disease 2019. It is part o
 
 👤 **Fangyu Zhai**
 
-![twitter](README_md_files%5Ctwitter.jpg?v=1&type=image)
+![twitter](/Resources/twitter.jpg)
 
 This project is marketed on Twitter [@rtep33](https://twitter.com/home?lang=zh-cn) 
 You can follow and contact us via Twitter
