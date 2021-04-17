@@ -45,12 +45,9 @@ This is a project designed to respond to Corona Virus Disease 2019. It is part o
 👤 **Fangyu Zhai**
 
 
-This project is marketed on Twitter [@rtep33](https://twitter.com/home?lang=zh-cn) and Youtube [@rtep33](https://www.youtube.com/channel/UCCvc7pFWic0xjirFMHCyqww)
+This project is marketed on Twitter [@rtep33](https://twitter.com/home?lang=zh-cn) 
 You can follow and contact us via Twitter
 <p align="center">
   <a href="https://twitter.com/home?lang=zh-cn"><img height=100 src="Resources/twitter.jpg"></img></a>
-</p>  
-<p align="center">
-  <a href="https://www.youtube.com/channel/UCCvc7pFWic0xjirFMHCyqww"><img height=100 src="Resources/youtube.jpg"></img></a>
 </p>  
 
