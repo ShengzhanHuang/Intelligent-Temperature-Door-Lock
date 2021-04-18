@@ -1,4 +1,3 @@
-
 #ifndef _MLX90614_H_
 #define _MLX90614_H_
 
@@ -14,4 +13,5 @@
 #define MLX90614_REVISE_EMISSIVITY  (0xF332)    //发射率值，计算方法    （65535 * ? =需向寄存器写入的值）例如：发射率为0.95，则写入值为65535*0.95=0xF332
 
 #endif /*_MLX90614_H_*/
-void MLAX90614_ReadTempture(int); #pragma once
+void MLAX90614_ReadTempture(int);
+int sensor();

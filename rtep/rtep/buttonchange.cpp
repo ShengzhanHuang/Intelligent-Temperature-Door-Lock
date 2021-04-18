@@ -1,22 +1,23 @@
 #include <wiringPi.h>
 #include <stdio.h>
 #include <stdlib.h>
-int main(void)
+#include "button.h"
+int button(void)
 {
 	wiringPiSetup();
 	pinMode(7, INPUT);
 	digitalWrite(7, HIGH);
 	printf("system start");
-	while (1)
-		if (digitalRead(7) == LOW) {
-			//  delay (500) ;
-			printf("close");
-			system("raspistill -o imag%01d.jpg");
-			// system("^c");
-		}
+	//while(1)
+	if (digitalRead(7) == LOW) {
+		//  delay (500) ;
+		printf("close");
+		system("raspistill -o imag%01d.jpg");
+		// system("^c");
+	}
 	//else{
-	// printf("open");
-	// delay (500) ;
+	 //printf("open");
+	 //delay (500) ;
 	//}
 }
 // {

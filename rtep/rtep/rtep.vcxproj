@@ -139,16 +139,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="button.h" />
     <ClInclude Include="MLX90614.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="button.cpp" />
+    <ClCompile Include="buttonchange.cpp" />
     <ClCompile Include="clean.cpp" />
     <ClCompile Include="clean_all.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="MLX90614.cpp" />
     <ClCompile Include="Temperature.cpp" />
     <ClCompile Include="time.cpp" />
     <ClCompile Include="time14.cpp" />
+    <ClCompile Include="web.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

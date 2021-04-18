@@ -10,15 +10,15 @@ void MLAX90614_ReviseTempture(int lFd)
 /* MLAX90614温度读取 */
 void MLAX90614_ReadTempture(int lFd)
 {
-    float fBodyTempture = 0.0;  //物体温度值
+    fBodyTempture = 0.0;  //物体温度值
     float fEnvTempture = 0.0;   //环境温度值
     int lBodyRegData = 0;       //物体温度寄存器值
     int lEnvRegData = 0;        //环境温度寄存器值
     /* 读取物体及环境温度寄存器值 */
     lBodyRegData = wiringPiI2CReadReg16(lFd, MLX90614_REG_BODYDATA);
     lEnvRegData = wiringPiI2CReadReg16(lFd, MLX90614_REG_ENVIRONMENTDATA);
-    //printf("Body reg data is %d\n", lBodyRegData);
-    //printf("Environment reg data is %d\n", lEnvRegData);
+    printf("Body reg data is %d\n", lBodyRegData);
+    printf("Environment reg data is %d\n", lEnvRegData);
 
     /* 将物体及环境温度寄存器值换算成实际温度值 */
     fBodyTempture = ((float)(lBodyRegData) * 0.02) - 273.15;
@@ -27,7 +27,7 @@ void MLAX90614_ReadTempture(int lFd)
     printf("Environment tempture is %f\n", fEnvTempture);
 }
 
-int sensor(int argc, char** argv)
+int sensor()//int argc, char **argv)
 {
     int lFd = 0;
     /* 初始化树莓派所有GPIO引脚*/
@@ -44,7 +44,7 @@ int sensor(int argc, char** argv)
 
     //   while (1)
     //   {
-     //      MLAX90614_ReadTempture(lFd);
+    MLAX90614_ReadTempture(lFd);
     //       delay(1000);
     //   }
 
