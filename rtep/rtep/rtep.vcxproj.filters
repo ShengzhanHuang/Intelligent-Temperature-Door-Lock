@@ -18,6 +18,9 @@
     <ClInclude Include="MLX90614.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="button.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MLX90614.cpp">
@@ -39,6 +42,15 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="time14.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="buttonchange.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="web.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
