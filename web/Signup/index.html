@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>Signup</title>
+</head>
+<body>
+    <div id="bigBox">
+        <h1>SIGNUP</h1>
+        <!-- <form action="signup.php" method="GET"> -->
+
+        <div class="inputBox">
+            <div class="inputText">
+                <input type="text" required="required" id="username" placeholder="Username" />
+            </div>
+
+            <div class="inputText">
+                <input type="password" maxlength="20" name="pwd1" id="pwd1" required="required" placeholder="Password" />
+            </div>
+
+            <div class="inputText">
+                <input type="password" maxlength="20" name="pwd2" id="pwd2" required="required" placeholder="Insure" />
+                <span id="warning"></span>
+            </div>
+
+        <!--
+            <div class="inputText">
+                <input type="text" maxlength="11" id="tel" required="required" placeholder="Phonenumber" />
+                <span id="telError"></span>
+                
+            </div>
+
+            <div class="inputText">
+                <input type="text" maxlength="6" id="captcha" required="required" placeholder="Captcha" />
+            </div> 
+
+            
+            
+
+            <input type="button" id="ver" class="inputButton" value="Get Captcha" onclick="get()" />
+        -->
+            
+            <br></br>
+            <input type="button" class="inputButton" value="CANCEL" onclick="javascrtpt:window.location.href='../Login/index.html'"/>
+
+            <input type="button" id="submit" class="inputButton" value="CONFIRM" onclick="Register()"/>
+        </div>
+        </form>
+
+    </div>
+
+    <script>
+        function Register()
+        {
+            var Username = document.getElementById("username").value,
+                Password1 = document.getElementById("pwd1").value,
+                Password2 = document.getElementById("pwd2").value,
+                Data = "Username" + Username + "&" + "Password" + Password1;
+            
+            if(!(check()))
+            {
+                return;
+            }
+
+            
+            var Request = new XMLHttpRequest();
+            
+            Request.open("GET","signup.php?"+ Data);
+            Request.send();
+        }
+
+
+
+        //判断两次输入密码是否相同
+
+        function check()
+        {
+           if(document.getElementById("pwd1").value!=document.getElementById("pwd2").value)
+           {
+               document.getElementById("warning").innerHTML="Passwords are different! ";
+               warning.style.display='block';
+               return false;
+           }
+
+           else
+           {
+               warning.style.display = 'none';
+               //document.getElementById("warning").innerHTML= " ";
+               return true;
+
+           }
+        }
+
+        /*
+        //获取验证码
+
+        let  ver = document.getElementById("ver"),
+             tel = document.getElementById("tel"),
+             telError = document.getElementById('telError'),
+             telReg = /^07[123456789]\d{8}$/;
+
+        // 判断输入的电话是否符合规定
+
+        function get()
+        {
+            if(telReg.test(tel.value))
+            {
+                telError.style.display = 'none';
+                ver.style.background = '#c99090';
+                ver.style.color = 'white';
+                settime(ver);
+                
+            }
+            else
+            {
+                document.getElementById("telError").innerHTML="Enter the correct phone number! ";
+                telError.style.display = 'block';
+            }
+        }
+
+        // 设置获取验证码倒计时
+
+             var countdown = 10;
+            function settime(val)
+            {
+                if(countdown==0)
+                    {
+                        val.disabled = false;
+                        val.value = "Get Captcha";
+                        countdown = 10;
+                        return;
+                    }
+                else
+                    {
+                        val.setAttribute("disabled",true);
+                        val.value="Get it agian " + countdown + "s";
+                        countdown-- ;
+                    }
+                    setTimeout (function()
+                    {
+                        settime(val)
+                    },1000)
+            }*/
+
+
+        //给手机发送验证码
+
+        /*$(function(){
+            $("#ver").click(function()
+            {
+                var userinfo = 
+                {
+                    "UserPhoneNum": '44//' + $("input[name='tel']").val();
+                }
+
+                $.ajax({
+                    url:"",
+                    data:userinfo,
+                    type:"get",
+                    success:function(data)
+                    {
+                        if(JSON.parse(data).state === 404 || JSON.parse(data).state === 202 || userinfo.UserPhoneNum ==='44//')
+                        {
+                            alter("Failed to send verification code!")
+                        }
+                        else
+                        {
+                            alert("The verification code was sent successfully, please wait patiently!")
+                        }
+                    },
+                    error :function()
+                    {
+                        alert("Failed to send")
+                    }
+                });
+            });
+        })*/
+
+
+
+    /*
+        // 入口函数
+        $(function()
+        {
+            //点击获取验证码，请求接口，发给用户验证码
+            $('#ver').on('click',function()
+            {
+                //获取用户手机号
+                var phoneNum = 
+                {
+                    "PhoneNum": '44//' + $("input[name='tel']").val()
+                }
+                //console.log(phoneNum)
+                //调用发短信验证码的接口
+                check(phoneNum,tpl_val);
+                count($(this));
+                //把code=431515 进行截取字符，最终拿到发给用户的验证码
+                var tpl_value = decodeURIComponent(tpl_val);
+                //console.log(tpl_value);
+                chenkNum = tpl_value.slice(7);
+                console.log(chenkNum); //这是发给用户的验证码
+                
+            });
+
+            //根据接口文档，封装函数
+            function check(mobile,tpl_value)
+            {
+                $.ajax(
+                    {
+                        type:'get',
+                        //url:'http://v.juhe.cn/sms/send?mobile=手机号码&tpl_id=短信模板ID&tpl_value=%23code%23%3D654654&key=',
+                        url:'hettp://v.juhe.cn/sms/send',
+                        data:{
+                            mobile:mobile,
+                            tpl_id:888,
+                            tpl_value:tpl_value,
+                            key:'648a729c43b06d59c0362850587bca'
+                        },
+                        dataType:"jsonp",
+                        jsonp:"callback",
+                        success:function(data)
+                        {
+                            console.log(data)
+                            //用户输入验证码
+                            $('.goRegister').on('click',function()
+                            {
+
+					            console.log(1111)
+						        // 2.5.1 如果验证码发送成功，对验证码进行成功匹配，否则提示用户错误信息
+						        if(data.error_code === 0) 
+                                {
+							        // 2.5.2 如果发送的验证码和用户输入的验证码一致，就注册成功，否则提示用户验证不正确
+							        if(chenkNum === $('.phone').val())
+                                    {
+								    alert("registration success！");
+								    // 进入到网站中
+								    window.location = 'file:///F:/VS%20HTML/Login/index.html';
+							        }
+                                    else
+                                    {
+								        alert("The verification code you entered is incorrect, please enter the correct verification code!");
+							        }
+						        }
+                                else
+                                {
+							        // 否则提示用户错误信息
+							        alert(data.reason);
+						        }
+				            });
+                        }
+                    })
+            }
+
+
+            //封装生成随机的6位数函数
+            function mathRan(){
+                var num = '';
+                for(var i = 0; i <6; i++)
+                {
+                    num += Math.floor(Math.random()*10);
+                }
+                return num;
+            }
+
+            var mathNum = mathRan();
+            // console.log(mathNum); //455969
+
+            //根据接口文档，对验证码进行转换 urlencode形式
+            var tpl_val = encodeURIComponent('#code#='+mathNum);
+            //console.log(tpl_val); // %23code%23%3D313395
+
+            //封装倒计时函数
+
+
+        })*/
+
+
+
+    
+
+
+
+    </script>
+</body>
+</html>

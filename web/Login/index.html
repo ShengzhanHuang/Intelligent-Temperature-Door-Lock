@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>Login</title>
+</head>
+<body>
+    <div id="bigBox">
+        <h1> LOGIN</h1>
+<!--        <form action="login.php" method="get">-->
+<!--            <div class="inputBox">-->
+<!--                <div class="inputText">-->
+<!--                    <input type="text" id="Username" required="required" placeholder="Username" />-->
+<!--                </div>-->
+<!--                <div class="inputText">-->
+<!--                    <input type="password" id="password" required="required" placeholder="Password" />-->
+<!--                </div>-->
+
+<!--                <br></br>-->
+<!--                <input type="button" class="inputButton" value="LOGIN" onclick="Login()"/>-->
+<!--                <input type="button" class="inputButton" value="SIGNUP " onclick="javascrtpt:window.location.href='../Signup/index.html'" />-->
+<!--            </div>-->
+<!--        </form>-->
+        <div class="inputBox">
+            <div class="inputText">
+                <input type="text" id="Username" required="required" placeholder="Username" />
+            </div>
+            <div class="inputText">
+                <input type="password" id="password" required="required" placeholder="Password" />
+            </div>
+
+            <br></br>
+            <input type="button" class="inputButton" value="LOGIN" onclick="Login()"/>
+            <input type="button" class="inputButton" value="SIGNUP " onclick="javascrtpt:window.location.href='../Signup/index.html'" />
+        </div>
+
+    </div>
+    
+    <script>
+    function Login()
+        {
+           var Username = document.getElementById("Username").value,
+               Password = document.getElementById("password").value,
+               Data = "Username=" + Username + "&" + "password=" + Password;
+            //console.info("%s",Username);
+            //console.info("%s",Password);
+            var Request = new XMLHttpRequest();
+            
+            Request.open("GET","login.php?"+Data);
+            Request.send();
+            console.info("bbb");
+            
+        }
+</script>
+</body>
+</html>
