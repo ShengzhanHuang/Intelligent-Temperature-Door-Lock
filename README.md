@@ -16,7 +16,7 @@ This is a project designed to respond to Corona Virus Disease 2019. It is part o
 -  128*64 OLED
 
 ## Circuit Schematic
-![circuit schematic](README_md_files%5Ccircuit%20schematic.jpg?v=1&type=image)
+![circuit schematic](Resources/circuit schematic.jpg)
 
 ## Mode
 #### mode: public state
