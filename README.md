@@ -15,6 +15,9 @@ This is a project designed to respond to Corona Virus Disease 2019. It is part o
 - GY-906 MLX90614ESF Contactless Temperature Sensor Module Compatible
 -  128*64 OLED
 
+## Circuit Schematic
+![circuit schematic](README_md_files%5Ccircuit%20schematic.jpg?v=1&type=image)
+
 ## Mode
 #### mode: public state
 + **State description**: The system in the public state is usually applicable to public places such as laboratories and teaching buildings, shopping malls, supermarkets and other scenarios. The unlocking condition of the door lock system in this scenario is the only criterion for determining whether the temperature is normal, and the body temperature and photos of each visitor will be recorded, and the information will be returned to the administrator authority owner.
