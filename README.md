@@ -41,11 +41,11 @@ This is a project designed to respond to Corona Virus Disease 2019. It is part o
 ## Author
 > Introduction Team 33 in ENG5220: Real Time Embedded Programming
 
-👤 **Shengzhan Huang**
+👤 **Shengzhan Huang** https://github.com/ShengzhanHuang
 
-👤 **Yingqi Wang**
+👤 **Yingqi Wang**  https://github.com/tfboma
 
-👤 **Fangyu Zhai**
+👤 **Fangyu Zhai**  https://github.com/zhaidiii
 
 
 This project is marketed on Twitter [@rtep33](https://twitter.com/home?lang=zh-cn) and Youtube [@rtep33](https://www.youtube.com/channel/UCCvc7pFWic0xjirFMHCyqww)
