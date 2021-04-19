@@ -1,0 +1,73 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/background1.jpg);
+    background-repeat: no-repeat;
+}
+
+#bigBox
+{
+    margin: 0 auto;
+    margin-top: 200px;
+    padding: 20px 50px;
+    background-color: #c99090;
+    width: 350px;
+    height: 330px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#bigBox h1
+{
+    color: white;
+}
+
+#bigBox .inputBox
+{
+    margin-top: 50ox;
+}
+
+#bigBox .inputBox .inputText
+{
+    margin-top: 20px;
+}
+
+#bigBox .inputBox .inputText input
+{
+    border: 0;
+    padding: 10px 10px;
+    border-bottom: 1px solid white;
+    background-color: #c99090;
+    color: white;
+}
+
+#bigBox .warning
+{
+    position :absolute;
+    display: none;
+    color:red;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+}
+
+#bigBox .inputBox .inputButton
+{
+    border: 0;
+    width: 80px;
+    height: 25px;
+    color: white;
+    margin-top: 30px;
+    margin-left: 20px;
+    border-radius: 20px;
+    background-image: linear-gradient(to right,#b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+}
+
+#bigBox .telError
+{
+    color:red;
+    display: none;
+}
+

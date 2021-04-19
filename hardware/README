@@ -1,0 +1,6 @@
+This is some code about the hardware.
+MLX90614.c implementation of the call of the temperature sensor.
+botton.c call the button to take a photo.
+time14.c is the driver of the display module。
+main.c is the main business function.
+
