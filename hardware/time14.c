@@ -7,27 +7,27 @@
 #include <stdlib.h>
 int fd;
 unsigned char  yi[4][16]={
-"WELCOME !    ",//第一行
-"                ",//第二行
-"                ",//第三行
-"              " //第四行
-};               //显示内容
+"WELCOME !    ",//The first line
+"                ",//The second line
+"                ",//The third line
+"              " //The fourth line
+};               //Display content
 const unsigned char zi[];
-void init(void)//初始化
+void init(void)//initialization
 {
 	wiringPiSetup();
-        fd=wiringPiI2CSetup(0x3c);//i2c初始化 0x3c是oled的从机地址
-        wiringPiI2CWriteReg8(fd,0x00,0xa1);//图像反了修改成0xa0
-        wiringPiI2CWriteReg8(fd,0x00,0xc8);//行输出反了修改成0xc0
-        wiringPiI2CWriteReg8(fd,0x00,0x8d);//允许电荷泵
+        fd=wiringPiI2CSetup(0x3c);//i2c initialization 0x3c is the slave address of oled
+        wiringPiI2CWriteReg8(fd,0x00,0xa1);//The image is reversed and modified to 0xa0
+        wiringPiI2CWriteReg8(fd,0x00,0xc8);//The line output is reversed and modified to 0xc0
+        wiringPiI2CWriteReg8(fd,0x00,0x8d);//Allow charge pump
         wiringPiI2CWriteReg8(fd,0x00,0x14);
-        wiringPiI2CWriteReg8(fd,0x00,0xa6);//想反相显示改成0xa7
-        wiringPiI2CWriteReg8(fd,0x00,0x21);//重置列地址
+        wiringPiI2CWriteReg8(fd,0x00,0xa6);
+        wiringPiI2CWriteReg8(fd,0x00,0x21);//Reset column address
         wiringPiI2CWriteReg8(fd,0x00,0x00);
         wiringPiI2CWriteReg8(fd,0x00,0x7f);
-        wiringPiI2CWriteReg8(fd,0x00,0xaf);//开显示
+        wiringPiI2CWriteReg8(fd,0x00,0xaf);//Open display
 }
-void qingping(void)//清屏
+void qingping(void)//Clear screen
 {
 	char zt1,zt2;
 	for(zt1=0;zt1<8;zt1++)
@@ -36,7 +36,7 @@ void qingping(void)//清屏
 	        for(zt2=0;zt2<128;zt2++) wiringPiI2CWriteReg8(fd,0x40,0x00);
 	}
 }
-void ascii(void)//显示ASCII码8*16
+void ascii(void)//Display ASCII code 8*16
 {
 	int zt;
         char zt3,zt4;
@@ -52,14 +52,14 @@ void ascii(void)//显示ASCII码8*16
                         	wiringPiI2CWriteReg8(fd,0x40,zi[yi[zt3][zt4]*16+zt+8]);
 	}
 }
-void shijian(void)//当前时间
+void shijian(void)//current time
 {
         struct tm *ptr;
         time_t lt;
         lt=time(&lt);
         ptr=localtime(&lt);
-        //strftime(yi[1],16,"%m/%d %a",ptr); //月/日 周几
-	strftime(yi[1],16,"%R %p",ptr);//时:分 am或pm
+        //strftime(yi[1],16,"%m/%d %a",ptr); //Month/day   day of the week
+	strftime(yi[1],16,"%R %p",ptr);//Hour:minute  am or pm
 }
 
 void wd()
