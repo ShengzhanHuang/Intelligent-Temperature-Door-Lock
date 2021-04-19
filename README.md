@@ -16,7 +16,7 @@ This is a project designed to respond to Corona Virus Disease 2019. It is part o
 -  128*64 OLED
 
 ## Circuit Schematic
-![circuit schematic](Resources/circuit schematic.jpg)
+![circuit schematic](https://github.com/ShengzhanHuang/Intelligent-Temperature-Door-Lock/blob/main/Resources/circuit%20schematic.jpg)
 
 ## Mode
 #### mode: public state
